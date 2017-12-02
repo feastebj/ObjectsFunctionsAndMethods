@@ -84,7 +84,7 @@ def main():
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
     try_methods()
     try_functions()
-
+    try_methods_and_functions()
     window.close_on_mouse_click()
 
 
@@ -246,15 +246,39 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
-
+    #0
     neb = rg.SimpleTurtle()
     neb.pen = rg.Pen('blue', 5)
-
+    #1
     neb.backward(100)
-    
+    #2
+    neb.speed = 1
+    for _ in range(2):
+        neb.draw_square(100)
+        neb.right(30)
+    #3
+    neb.speed = 5
+    neb.pen = rg.Pen('red', 5)
+    for _ in range(10):
+        neb.draw_square(50)
+        neb.right(15)
+    #4
+    neb.speed = 100
+    neb.pen = rg.Pen('red', 35)
+    for _ in range(8):
+        neb.draw_square(300)
+        neb.right(60)
+    #5
+    neb.pen = rg.Pen('black', 3)
+    #6
+    neb.backward(200)
+    #7
+    neb.draw_circle(30)
+    #8
+    neb.draw_square(50)
 
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
